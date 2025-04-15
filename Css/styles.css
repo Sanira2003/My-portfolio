@@ -1,0 +1,68 @@
+:root {
+    --background-body: #161513;
+    --background-header: #222;
+    --color-primary: #FFF;
+    --color-secondary: #C5C5C5;
+    --gradiant-blue: linear-gradient(180deg, #5BADFF 0%, #1373D1 100%);
+    --gradiant-primary: linear-gradient(116deg, #FF8660 71.79%, #9A33FF 95.51%);
+    --gradiant-secondary: linear-gradient(180deg, #FF8660 0%, #D5491D 100%);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+
+/*typorgraphy*/
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--background-body);
+    color: var(--color-secondary);
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 2.0rem;
+    letter-spacing: 0.4px;
+    line-height: normal;
+    text-align: center;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--color-primary);
+    line-height: 7.5rem;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 4.8rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    margin-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        font-size: 1.8rem;
+    }
+
+    h1 {
+        font-size: 5.5rem;
+    }
+
+    h2 {
+        font-size: 3.6rem;
+    }
+}
