@@ -17,5 +17,5 @@ linksContainerRomever.addEventListener("click", (event) => {
             icon.classList.toggle("extended");
     });
     linksContainer.classList.toggle("extended");
-    linksContainerRomever.classList.toggle("extended")
+    linksContainerRomever.classList.toggle("extended");
 });
