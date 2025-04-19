@@ -109,6 +109,7 @@ p {
     align-items: center;
     background: var(--background-header);
     display: flex;
+    font-family: 'Plus Jakarta Sans', Poppins;
     height: 7rem;
     justify-content: flex-end;
     position: fixed;
@@ -137,12 +138,18 @@ p {
 }
 
 .iocn-container svg {
+    fill: var(--color-secondary);
     border-radius: 8px;
     border: 1px solid var(--color-secondary);
     height: 4rem;
     width: 4rem;
     transform: rotateZ(-180deg);
     transition: 0.4s ease-in-out;
+}
+
+.iocn-container svg:hover {
+    fill: var(--color-primary);
+    border: 1px solid var(--color-primary);
 }
 
 
@@ -175,10 +182,10 @@ p {
 
 .links a {
     color: var(--color-primary);
+    font-size: 2.5rem;
     font-weight: 600;
     text-decoration: none;
     transition: .2s;
-    font-size: 2.5rem;
 }
 
 .links a:hover {
@@ -186,15 +193,14 @@ p {
 }
 
 .links-container-remover{
-    width: 100vw;
-    height: 100vh;
     display: none;
+    height: 100vh;
+    width: 100vw;
 }
 
 .links-container-remover.extended {
-    position: fixed;
     display: block;
-    /* background-color: rgba(0, 0, 0, 0.5); */
+    position: fixed;
 }
 
 @media screen and (min-width: 1024px) {
@@ -207,11 +213,11 @@ p {
     }
 
     .links-container {
-        right: 0;
+        align-items: center;
         flex-direction: row;
         justify-content: space-evenly;
-        align-items: center;
         padding-left: 3rem;
+        right: 0;
     }
 
     .links {
@@ -220,7 +226,7 @@ p {
     }
 
     .links a {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .logo-container {
@@ -232,5 +238,104 @@ p {
     }
 }
 
+/* project card section */
+
+.project-card {
+    background: var(--background-header);
+    border-radius: 20px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.project-image img {
+    width: 100%;
+}
+
+.project-description {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.project-link {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 1.5rem;
+    width: 100%;
+}
+
+.project-link .text {
+    color: var(--color-secondary);
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.project-link .text:hover {
+    color: var(--color-primary);
+}
+
+.project-link .arrow {
+    fill: var(--color-secondary);
+    transform: translateY(12%);
+    transition: .3s;
+}
+
+.arrow svg {
+    display: none;
+    height: 1.8rem;
+    width: 1.8rem;
+}
+
+.project-link .arrow:hover {
+    fill: var(--color-primary);
+    transform: translateX(12%);
+}
+
+.project-name {
+    align-items: center;
+    color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5rem;
+    font-weight: 700;;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .project-name {
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 2rem;
+        justify-content: flex-start;
+        margin-bottom: 1.5rem;
+        padding-left: 2rem;
+        text-wrap: nowrap;
+        width: 100%;
+    }
+
+    .project-name div {
+        margin-left: 0.8rem;
+    }
+
+    .arrow svg {
+        display: block;
+    }
+
+    .project-link {
+        justify-content: space-between;
+        margin-bottom: .5rem;
+        margin-top: 1rem;
+        padding: 0 3rem;
+
+    }
+    .project-link .text {
+        font-size: 1.2rem;
+    }
+}
 
 
