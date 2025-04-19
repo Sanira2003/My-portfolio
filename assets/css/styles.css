@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 :root {
     --background-body: #161513;
     --background-header: #222;
     --color-primary: #FFF;
     --color-secondary: #C5C5C5;
-    --gradiant-blue: linear-gradient(180deg, #5BADFF 0%, #1373D1 100%);
+    --color-blue: #1373D1;
     --gradiant-primary: linear-gradient(116deg, #FF8660 71.79%, #9A33FF 95.51%);
     --gradiant-secondary: linear-gradient(180deg, #FF8660 0%, #D5491D 100%);
 }
@@ -21,13 +24,13 @@ html {
 }
 
 body {
+    padding: 0 3rem;
     background: var(--background-body);
     color: var(--color-secondary);
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-size: 2.0rem;
     letter-spacing: 0.4px;
     line-height: normal;
-    text-align: center;
 }
 
 h1,
@@ -64,5 +67,39 @@ p {
 
     h2 {
         font-size: 3.6rem;
+    }
+}
+
+/* buttons */
+.btn {
+    align-items: center;
+    background: var(--color-primary);
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 0 4px var(--color-secondary);
+    display: flex;
+    height: 6rem;    
+    justify-content: center;
+    outline: none;
+    transition: .4s;
+    width: 6rem;
+}
+
+.btn:hover {
+    background: var(--color-blue);
+}
+
+.btn img {
+    width: 4.6rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .btn {
+        width: 4.8rem;
+        height: 4.8rem;
+    }
+
+    .btn img {
+        width: 3.8rem;
     }
 }
