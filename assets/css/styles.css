@@ -410,3 +410,53 @@ p {
 
 /* featured image */
 
+.featured-image-container {
+    height: 50%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-image {
+    height: 80%;
+    aspect-ratio: 2 / 3;
+    width: auto;
+    background: var(--gradiant-primary);
+    border: 2px solid var(--color-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 55% 45%;
+    overflow: hidden;
+    animation: 4s imgFloat infinite;
+    transition: transform .4s infinite;
+}
+
+.featured-image img {
+    height: 100%;
+    position: absolute;
+    bottom: -10%;
+}
+
+@keyframes imgFloat {
+    50% {
+        border-radius: 40% 55%;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .featured-image-container {
+        width: 50%;
+        height: 100%;
+    }
+
+    .featured-image {
+        width: 50%;
+        aspect-ratio: 2 / 3;
+        height: auto;
+    }
+}
+
