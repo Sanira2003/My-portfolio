@@ -352,4 +352,61 @@ p {
 }
 
 
+/* wrapper */
+
+.wrapper {
+    height: 500vh;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 3rem;
+}
+
+/* sections */
+
+.sections-reverse,
+.sections {
+    height: 20%;
+    width: 100%;
+    padding-top: 7rem;
+}
+
+.sections-reverse {
+    display: flex;
+    flex-direction: column;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media screen and (min-width:1024px) {
+    .sections-reverse {
+        flex-direction: row-reverse;
+    }
+
+    .sections {
+        flex-direction: row;
+    }
+}
+
+
+#about {
+    background: red;
+}
+
+#skills {
+    background: green;
+}
+
+#projects {
+    background: yellow;
+}
+
+#contact {
+    background: plum;
+}
+
+/* featured image */
 
