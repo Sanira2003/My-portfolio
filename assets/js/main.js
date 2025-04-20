@@ -19,3 +19,17 @@ linksContainerRomever.addEventListener("click", (event) => {
     linksContainer.classList.toggle("extended");
     linksContainerRomever.classList.toggle("extended");
 });
+
+
+let currentRoleIndex = 1;
+const text = document.getElementById("typing-text");
+const roles = ["Web Developer.","Designer.", "Programmer."];
+
+function typingText() {
+  text.innerText = roles[currentRoleIndex];
+  currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+}
+
+setInterval(typingText, 6000);
+
+

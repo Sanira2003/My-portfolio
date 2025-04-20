@@ -7,7 +7,7 @@
     --color-primary: #FFF;
     --color-secondary: #C5C5C5;
     --color-blue: #1373D1;
-    --gradiant-primary: linear-gradient(116deg, #FF8660 71.79%, #9A33FF 95.51%);
+    --gradiant-primary: linear-gradient(116deg, #FF8660 40%, #9A33FF 90%);
     --gradiant-secondary: linear-gradient(180deg, #FF8660 0%, #D5491D 100%);
 }
 
@@ -77,11 +77,17 @@ p {
     border: none;
     box-shadow: 0 0 4px var(--color-secondary);
     display: flex;
-    height: 6rem;    
+    height: 5rem;    
     justify-content: center;
     outline: none;
     transition: .4s;
-    width: 6rem;
+    width: 5rem;
+}
+
+.btn a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
 .btn:hover {
@@ -89,17 +95,17 @@ p {
 }
 
 .btn img {
-    width: 4.6rem;
+    width: 4rem;
 }
 
 @media screen and (min-width: 1024px) {
     .btn {
-        width: 4.8rem;
-        height: 4.8rem;
+        width: 4rem;
+        height: 4rem;
     }
 
     .btn img {
-        width: 3.8rem;
+        width: 3.2rem;
     }
 }
 
@@ -204,9 +210,6 @@ p {
 }
 
 @media screen and (min-width: 1024px) {
-    .navbar {
-        height: 50px;
-    }
 
     .iocn-container{
         display: none;
@@ -216,13 +219,13 @@ p {
         align-items: center;
         flex-direction: row;
         justify-content: space-evenly;
-        padding-left: 3rem;
+        padding-right: 4.5rem;
         right: 0;
     }
 
     .links {
         align-items: center;
-        height: 50px;
+        height: 70px;
     }
 
     .links a {
@@ -231,6 +234,7 @@ p {
 
     .logo-container {
         height: 5rem;
+        padding-left: 7rem;
     }
 
     .logo-container img {
@@ -337,5 +341,15 @@ p {
         font-size: 1.2rem;
     }
 }
+
+/* contact icon container */
+
+.contact-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
 
 
