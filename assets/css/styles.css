@@ -674,6 +674,23 @@ header {
     align-items: center;
 }
 
+.project-container {
+    position: relative;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     .project-card {
         width: 80%;

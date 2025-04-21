@@ -102,6 +102,8 @@ function nextProject() {
     index = indexIncrease();
     project1.innerHTML = createProjectInnerHtml(projects[index]);
     project2.innerHTML = createProjectInnerHtml(projects[indexIncrease()]);
+    applyAnimation(project1);
+    applyAnimation(project2);
     intervalId = setInterval(showProjects, 4000);
 }
 
@@ -110,6 +112,8 @@ function prevProject() {
     index = indexDecrease();
     project1.innerHTML = createProjectInnerHtml(projects[index]);
     project2.innerHTML = createProjectInnerHtml(projects[indexIncrease()]);
+    applyAnimation(project1);
+    applyAnimation(project2);
     intervalId = setInterval(showProjects, 4000);
 }
 
@@ -118,7 +122,15 @@ function prevProject() {
 function showProjects() {
     project1.innerHTML = createProjectInnerHtml(projects[index]);
     project2.innerHTML = createProjectInnerHtml(projects[indexIncrease()]);
+    applyAnimation(project1);
+    applyAnimation(project2);
     index = indexIncrease(); 
 }
 
 let intervalId = setInterval(showProjects, 4000);
+
+function applyAnimation(element) {
+    element.classList.remove("fade-in");
+    void element.offsetWidth;
+    element.classList.add("fade-in");
+}
