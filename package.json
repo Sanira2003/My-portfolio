@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Responsive portfolio website",
   "source": "index.html",
-  "scripts": {
-  "build": "rm -rf dist && parcel build index.html",
+"scripts": {
+  "build": "rm -rf dist && NODE_OPTIONS=--max_old_space_size=4096 parcel build index.html",
   "prebuild": "npm install"
 },
   "targets": {

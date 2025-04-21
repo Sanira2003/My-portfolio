@@ -3,4 +3,5 @@
   publish = "dist"
 
 [build.environment]
-  NODE_VERSION = "18"  # Match your local version (check with `node -v`)
+  NODE_VERSION = "18"  # Must match your local version
+  NODE_OPTIONS = "--max_old_space_size=4096"  # Double memory allocation
