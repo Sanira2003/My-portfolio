@@ -4,8 +4,8 @@
   "description": "Responsive portfolio website",
   "source": "index.html",
   "scripts": {
-  "dev": "parcel index.html",
-  "build": "parcel build index.html"
+  "build": "rm -rf dist && parcel build index.html",
+  "prebuild": "npm install"
 },
   "targets": {
     "default": {
