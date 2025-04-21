@@ -124,7 +124,7 @@
         </div>
       </div>
 
-      <div class="section" id="skills">
+       <div class="section" id="skills">
         <header data-aos="zoom-in">Skills</header>
         <div class="section-normal" data-aos="zoom-in-up">
           <div class="section2x2">
@@ -198,49 +198,21 @@
           <div class="section2x2">
             <div class="project-card-container">
               <div class="project-card project-container" id="first-project" data-aos="flip-left">
-                <div class="project-image">
-                    <img src="assets/images/project-images/portfolio.png" alt="portfolio.png">
-                </div>
-                <div class="project-description">
-                    <div class="project-link">
-                        <a href="" class="text">click here to visit</a>
-                        <a href="" class="arrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" ><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg>
-                        </a>
-                    </div>
-                    <div class="project-name">
-                        <div>portfolio</div>
-                        <div>website</div>
-                    </div>
-                </div>
+              
               </div>
             </div>
             <div class="project-card-container">
               <div class="project-card project-container" id="second-project" data-aos="flip-right">
-                <div class="project-image">
-                    <img src="assets/images/project-images/html.jpg" alt="html.jpg">
-                </div>
-                <div class="project-description">
-                    <div class="project-link">
-                        <a href="" class="text">click here to visit</a>
-                        <a href="" class="arrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" ><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg>
-                        </a>
-                    </div>
-                    <div class="project-name">
-                        <div>html</div>
-                        <div>tutorial</div>
-                    </div>
-                </div>
+              
               </div>
             </div>
           </div>
           <div class="section2x2">
               <div class="contact-icon-container">
-                <button class="btn" onclick="prevProject()">
+                <button class="btn" id="prev-button">
                       <img src="assets/images/icons/left-arrow.png" alt="email icon">
                 </button>
-                <button class="btn" onclick= "nextProject()">
+                <button class="btn" id="next-button">
                       <img src="assets/images/icons/right-arrow.png" alt="email icon">
                 </button>
               </div>
@@ -290,7 +262,7 @@
 
     </div>
 
-    <script src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
