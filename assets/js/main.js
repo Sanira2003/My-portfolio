@@ -49,9 +49,17 @@ function typingText() {
 setInterval(typingText, 6000);
 
 // projects
+import portfolioImg from '../images/project-images/portfolio.png';
+import htmlImg from '../images/project-images/html.jpg';
+import cssImg from '../images/project-images/css.jpg';
+
 
 const project1 = document.getElementById("first-project");
 const project2 = document.getElementById("second-project");
+const prevBtn = document.getElementById("prev-button");
+const nextBtn = document.getElementById("next-button");
+
+
 class Project {
     constructor(imageLink, name1, name2, link) {
         this.imageLink = imageLink;
@@ -62,15 +70,15 @@ class Project {
 }
 
 const projects = [
-    new Project('portfolio.png','portfolio','website',''), 
-    new Project('html.jpg', 'html', 'tutorial', ''),
-    new Project('css.jpg', 'css', 'tutorial', '')
+    new Project(portfolioImg,'portfolio','website',''), 
+    new Project(htmlImg, 'html', 'tutorial', ''),
+    new Project(cssImg, 'css', 'tutorial', '')
 ];
 
 function createProjectInnerHtml(project) {
     return (
         `<div class="project-image">
-            <img src="assets/images/project-images/${project.imageLink}" alt="${project.imageLink}">
+            <img src="${project.imageLink}" alt="${project.name1} ${project.name2}">
         </div>
         <div class="project-description">
             <div class="project-link">
@@ -87,7 +95,7 @@ function createProjectInnerHtml(project) {
     )
 }
 
-let index = 1;
+let index = 0;
 
 function indexIncrease() {
     return ((index + 1) % projects.length);
@@ -100,21 +108,15 @@ function indexDecrease() {
 function nextProject() {
     clearInterval(intervalId);
     index = indexIncrease();
-    project1.innerHTML = createProjectInnerHtml(projects[index]);
-    project2.innerHTML = createProjectInnerHtml(projects[indexIncrease()]);
-    applyAnimation(project1);
-    applyAnimation(project2);
-    intervalId = setInterval(showProjects, 4000);
+    showProjects();
+    intervalId = setInterval(autoShowProjects, 4000);
 }
 
 function prevProject() {
     clearInterval(intervalId)
     index = indexDecrease();
-    project1.innerHTML = createProjectInnerHtml(projects[index]);
-    project2.innerHTML = createProjectInnerHtml(projects[indexIncrease()]);
-    applyAnimation(project1);
-    applyAnimation(project2);
-    intervalId = setInterval(showProjects, 4000);
+    showProjects()
+    intervalId = setInterval(autoShowProjects, 4000);
 }
 
 
@@ -123,11 +125,19 @@ function showProjects() {
     project1.innerHTML = createProjectInnerHtml(projects[index]);
     project2.innerHTML = createProjectInnerHtml(projects[indexIncrease()]);
     applyAnimation(project1);
-    applyAnimation(project2);
-    index = indexIncrease(); 
+    applyAnimation(project2); 
 }
 
-let intervalId = setInterval(showProjects, 4000);
+function autoShowProjects() {
+    index = indexIncrease();
+    showProjects();
+}
+showProjects();
+let intervalId = setInterval(autoShowProjects, 4000);
+
+
+prevBtn.addEventListener("click", prevProject);
+nextBtn.addEventListener("click", nextProject);
 
 function applyAnimation(element) {
     element.classList.remove("fade-in");
