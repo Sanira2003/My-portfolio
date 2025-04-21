@@ -70,7 +70,7 @@ const projects = [
 function createProjectInnerHtml(project) {
     return (
         `<div class="project-image">
-            <img src="assets/images/project images/${project.imageLink}" alt="${project.imageLink}">
+            <img src="assets/images/project-images/${project.imageLink}" alt="${project.imageLink}">
         </div>
         <div class="project-description">
             <div class="project-link">
