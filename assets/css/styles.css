@@ -41,7 +41,7 @@ h3 {
 
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
     body {
         font-size: 2.5rem;
     }
@@ -384,9 +384,9 @@ h3 {
 
 
 
-#skills {
+/* #skills {
     background: green;
-}
+} */
 
 #projects {
     background: yellow;
@@ -641,4 +641,62 @@ header {
 
 .about-image-container img {
     height: 100%;
+}
+
+/* skills */
+
+/* skill-icons */
+.skills-icons {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-evenly;
+    padding-bottom: 2rem;
+    width: 100%;
+}
+
+.skill-icon-container {
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    background: var(--color-secondary);
+    border-radius: 50%;
+    box-shadow: 0 0 2px var(--gradiant-secondary);
+    display: flex;
+    height: 25%;
+    justify-content: center;
+    width: auto;
+    transition: .4s;
+}
+
+
+.skill-icon-container:hover {
+    background: var(--color-primary);
+}
+
+.skill-icon-container img {
+    height: 60%;
+    width: auto;
+    aspect-ratio: 1 / 1;
+}
+
+
+@media screen and (min-width:1024px) {
+    .skill-icon-container {
+        height: auto;
+        width: 23%;
+    }
+}
+
+
+/* using now */
+.using-now , .learning{
+    height: 80%;
+    margin: auto;
+    width: 80%;
+}
+
+.using-now p , .learning p {
+    font-weight: 600;
+    text-transform: uppercase;
 }
