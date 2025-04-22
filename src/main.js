@@ -49,9 +49,9 @@ function typingText() {
 setInterval(typingText, 6000);
 
 // projects
-import portfolioImg from '../images/project-images/portfolio.png';
-import htmlImg from '../images/project-images/html.jpg';
-import cssImg from '../images/project-images/css.jpg';
+import portfolioImg from './assets/project-images/portfolio.png';
+import htmlImg from './assets/project-images/html.jpg';
+import cssImg from './assets/project-images/css.jpg';
 
 
 const project1 = document.getElementById("first-project");
@@ -70,7 +70,7 @@ class Project {
 }
 
 const projects = [
-    new Project(portfolioImg,'portfolio','website',''), 
+    new Project(portfolioImg,'portfolio','website','#home'), 
     new Project(htmlImg, 'html', 'tutorial', ''),
     new Project(cssImg, 'css', 'tutorial', '')
 ];
