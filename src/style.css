@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   --background-body: #161513;
   --background-header: #222;
-  --color-primary: #FFF;
-  --color-secondary: #C5C5C5;
-  --color-blue: #1373D1;
-  --gradiant-primary: linear-gradient(116deg, #FF8660 40%, #9A33FF 90%);
-  --gradiant-secondary: linear-gradient(180deg, #FF8660 0%, #D5491D 100%);
+  --color-primary: #fff;
+  --color-secondary: #c5c5c5;
+  --color-blue: #1373d1;
+  --gradiant-primary: linear-gradient(116deg, #ff8660 40%, #9a33ff 90%);
+  --gradiant-secondary: linear-gradient(180deg, #ff8660 0%, #d5491d 100%);
 }
 
 *,
@@ -16,7 +15,6 @@
 *::before {
   box-sizing: border-box;
 }
-
 
 /*typorgraphy*/
 html {
@@ -30,7 +28,7 @@ html {
 body {
   background: var(--background-body);
   color: var(--color-secondary);
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   letter-spacing: 0.4px;
   line-height: normal;
@@ -43,8 +41,6 @@ h3 {
   color: var(--color-primary);
   line-height: 7.5rem;
 }
-
-
 
 @media screen and (min-width: 768px) {
   body {
@@ -73,7 +69,7 @@ h3 {
   height: 4.5rem;
   justify-content: center;
   outline: none;
-  transition: .4s;
+  transition: 0.4s;
   width: 4.5rem;
 }
 
@@ -108,7 +104,7 @@ h3 {
   align-items: center;
   background: var(--background-header);
   display: flex;
-  font-family: 'Plus Jakarta Sans', Poppins;
+  font-family: "Plus Jakarta Sans", Poppins;
   height: 7rem;
   justify-content: flex-end;
   position: fixed;
@@ -151,7 +147,6 @@ h3 {
   border: 1px solid var(--color-primary);
 }
 
-
 .iocn-container.extended img {
   transform: rotateZ(180deg);
 }
@@ -165,7 +160,7 @@ h3 {
   right: -50%;
   top: 0;
   width: 50%;
-  transition: .4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .links-container.extended {
@@ -184,7 +179,7 @@ h3 {
   font-size: 2.5rem;
   font-weight: 600;
   text-decoration: none;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .links a:hover {
@@ -232,10 +227,8 @@ h3 {
 
   .logo-container img {
     width: 5rem;
-    ;
   }
 }
-
 
 /* contact icon container */
 
@@ -246,7 +239,6 @@ h3 {
   gap: 30px;
 }
 
-
 /* wrapper */
 
 .wrapper {
@@ -255,6 +247,7 @@ h3 {
   padding: 0 3rem;
   width: 100%;
   max-height: calc(1024px * 5);
+  min-height: calc(650px * 5);
 }
 
 /* sections */
@@ -281,9 +274,7 @@ h3 {
   flex-direction: column;
 }
 
-
-
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .section-reverse {
     flex-direction: row-reverse;
   }
@@ -315,14 +306,15 @@ h3 {
   justify-content: center;
   overflow: hidden;
   position: relative;
-  transition: transform .4s infinite;
+  transition: transform 0.4s infinite;
   width: auto;
 }
 
 .featured-image img {
-  bottom: -10%;
+  bottom: 0;
   height: 100%;
   position: absolute;
+  transform: scale(1.2);
 }
 
 @keyframes imgFloat {
@@ -330,7 +322,6 @@ h3 {
     border-radius: 40% 55%;
   }
 }
-
 
 @media screen and (min-width: 1024px) {
   .featured-image-container {
@@ -456,7 +447,7 @@ h3 {
   font-size: 3rem;
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .featured-text {
     height: 100%;
     width: 50%;
@@ -484,7 +475,6 @@ header {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 
 /* 2x2 sections */
 .section2x2 {
@@ -517,7 +507,6 @@ header {
   }
 }
 
-
 /* about image */
 
 .about-image {
@@ -525,16 +514,14 @@ header {
   display: flex;
   height: 100%;
   justify-content: center;
-  padding-bottom: 1.5rem;
   width: 100%;
 }
 
 .about-image-container {
   border-radius: 1rem;
-  height: 90%;
+  height: 80%;
   overflow: hidden;
   width: auto;
-
 }
 
 .about-image-container img {
@@ -564,9 +551,8 @@ header {
   height: 25%;
   justify-content: center;
   width: auto;
-  transition: .4s;
+  transition: 0.4s;
 }
-
 
 .skill-icon-container:hover {
   background: var(--color-primary);
@@ -578,14 +564,12 @@ header {
   aspect-ratio: 1 / 1;
 }
 
-
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .skill-icon-container {
     height: auto;
     width: 23%;
   }
 }
-
 
 /* using now */
 .using-now,
@@ -607,7 +591,7 @@ header {
   background: var(--background-header);
   border-radius: 20px;
   overflow: hidden;
-  width: 90%;
+  width: 70%;
   box-shadow: 0 0 5px var(--color-secondary);
 }
 
@@ -645,7 +629,7 @@ header {
 .project-link .arrow {
   fill: var(--color-secondary);
   transform: translateY(12%);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .arrow svg {
@@ -666,7 +650,6 @@ header {
   flex-direction: column;
   font-size: 2.5rem;
   font-weight: 700;
-  ;
   margin-bottom: 3rem;
   text-align: center;
 }
@@ -720,10 +703,9 @@ header {
 
   .project-link {
     justify-content: space-between;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     margin-top: 1rem;
     padding: 0 3rem;
-
   }
 
   .project-link .text {
@@ -741,7 +723,7 @@ header {
 #projects .section2x2:first-of-type,
 #contact .section2x2:first-of-type {
   width: 100%;
-  height: calc(calc(100% - 8rem) * .7);
+  height: calc(calc(100% - 8rem) * 0.7);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -750,13 +732,12 @@ header {
 #projects .section2x2:last-of-type,
 #contact .section2x2:last-child {
   width: 100%;
-  height: calc(calc(100% - 8rem) * .3);
+  height: calc(calc(100% - 8rem) * 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 4rem;
 }
-
 
 .project-card-container {
   width: 100%;
@@ -777,7 +758,7 @@ header {
   margin: 0;
 }
 
-@media screen and (min-width:648px) {
+@media screen and (min-width: 648px) {
   #projects .project-card-container:last-of-type {
     display: flex;
   }
